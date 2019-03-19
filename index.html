@@ -5,11 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>pluralsights vue</title>
+    <link href='style.css'>
+    <style>
+        .accent-color{
+            color:#777;
+        }
+        .header-style{
+            font-family: 'Lucida Sans Unicode';
+            margin:20px;
+        }
+    </style>
     
 </head>
 <body>
     <div id="growler">
-        <h1>{{appName}}</h1>
+        <!-- style binding -->
+        <!-- <div class="header" :style='[headerStyle,accentColor]'> -->
+        <!--  class binding -->
+        <!-- <div :class='[headerStyle,accentColor]'> -->
+        <!-- <div :class="{
+            'header-style':isHeader,
+            'accent-color':false
+        }"> -->
+        <!-- javascript expression binding -->
+        <!-- <div :style='{color: isHeader? "orange":"black"}'> -->
+            <!-- HTML binding -->
+            <h1 v-html='appLink'></h1> 
+            <h2>we have a recative app</h2>
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- <h1 v-text='appName'></h1>     directive binding -->
+        <!-- <h1>Hello from {{appName}}</h1>     symantic binding -->
+        <!-- <h1 v-once>Hello from {{appName}}</h1>   once directive binding -->
     </div>
     <script src="vue.js"></script>
 
